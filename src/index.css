@@ -1,0 +1,70 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Hiragino Sans', sans-serif; color: #1a1a1a; background: #fff; }
+.nav { display: flex; justify-content: space-between; align-items: center; padding: 1.2rem 2rem; border-bottom: 0.5px solid #e5e5e5; position: sticky; top: 0; background: #fff; z-index: 100; }
+.nav-logo { font-size: 18px; font-weight: 500; letter-spacing: -0.5px; }
+.nav-links { display: flex; gap: 1.5rem; }
+.nav-links a { font-size: 14px; color: #666; text-decoration: none; cursor: pointer; transition: color 0.2s; }
+.nav-links a:hover { color: #1a1a1a; }
+.hero { min-height: 480px; padding: 5rem 2rem; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; background: #fff; overflow: hidden; position: relative; }
+.hero::before { content: ''; position: absolute; width: 500px; height: 500px; border-radius: 50%; background: #EEEDFE; right: -100px; top: -150px; z-index: 0; }
+.hero-text { position: relative; z-index: 1; }
+.hero-tag { display: inline-block; font-size: 12px; font-weight: 500; background: #EEEDFE; color: #3C3489; padding: 4px 12px; border-radius: 100px; margin-bottom: 1.2rem; }
+.hero h1 { font-size: 42px; font-weight: 500; line-height: 1.15; letter-spacing: -1px; margin-bottom: 1rem; }
+.hero h1 span { color: #534AB7; }
+.hero p { font-size: 16px; color: #666; line-height: 1.7; margin-bottom: 1.8rem; max-width: 420px; }
+.hero-buttons { display: flex; gap: 12px; flex-wrap: wrap; }
+.btn-primary { padding: 10px 24px; background: #534AB7; color: white; border: none; border-radius: 8px; font-size: 14px; font-weight: 500; cursor: pointer; transition: background 0.2s; }
+.btn-primary:hover { background: #3C3489; }
+.btn-secondary { padding: 10px 24px; background: transparent; border: 0.5px solid #ccc; color: #1a1a1a; border-radius: 8px; font-size: 14px; font-weight: 500; cursor: pointer; transition: all 0.2s; }
+.btn-secondary:hover { background: #f5f5f5; }
+.hero-visual { position: relative; z-index: 1; display: flex; justify-content: center; }
+.avatar-wrap { width: 260px; height: 260px; border-radius: 40% 60% 70% 30% / 50% 40% 60% 50%; background: linear-gradient(135deg, #AFA9EC, #534AB7); display: flex; align-items: center; justify-content: center; animation: morph 6s ease-in-out infinite; }
+@keyframes morph { 0%, 100% { border-radius: 40% 60% 70% 30% / 50% 40% 60% 50%; } 25% { border-radius: 60% 40% 30% 70% / 60% 50% 40% 50%; } 50% { border-radius: 30% 60% 60% 40% / 40% 60% 50% 60%; } 75% { border-radius: 60% 30% 40% 60% / 50% 40% 60% 40%; } }
+.avatar-inner { width: 200px; height: 200px; border-radius: 50%; background: #EEEDFE; display: flex; align-items: center; justify-content: center; font-size: 56px; font-weight: 500; color: #534AB7; }
+.stats-bar { display: flex; border-top: 0.5px solid #e5e5e5; border-bottom: 0.5px solid #e5e5e5; }
+.stat { flex: 1; padding: 1.2rem 2rem; border-right: 0.5px solid #e5e5e5; }
+.stat:last-child { border-right: none; }
+.stat-num { font-size: 28px; font-weight: 500; color: #534AB7; }
+.stat-label { font-size: 13px; color: #666; margin-top: 2px; }
+.section { padding: 4rem 2rem; }
+.section-header { display: flex; align-items: baseline; gap: 1rem; margin-bottom: 2.5rem; }
+.section-title { font-size: 24px; font-weight: 500; }
+.section-line { flex: 1; height: 0.5px; background: #e5e5e5; }
+.works-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5rem; }
+.work-card { background: #fff; border: 0.5px solid #e5e5e5; border-radius: 12px; overflow: hidden; cursor: pointer; transition: border-color 0.2s, transform 0.2s; }
+.work-card:hover { border-color: #999; transform: translateY(-2px); }
+.work-thumb { height: 180px; display: flex; align-items: center; justify-content: center; font-size: 48px; }
+.work-thumb.t1 { background: #EEEDFE; }
+.work-thumb.t2 { background: #E1F5EE; }
+.work-thumb.t3 { background: #FAECE7; }
+.work-thumb.t4 { background: #E6F1FB; }
+.work-info { padding: 1rem 1.25rem 1.25rem; }
+.work-tag { display: inline-block; font-size: 11px; font-weight: 500; padding: 3px 10px; border-radius: 100px; margin-bottom: 0.5rem; }
+.work-tag.ux { background: #EEEDFE; color: #3C3489; }
+.work-tag.app { background: #E1F5EE; color: #085041; }
+.work-tag.web { background: #FAECE7; color: #712B13; }
+.work-tag.sys { background: #E6F1FB; color: #0C447C; }
+.work-name { font-size: 16px; font-weight: 500; margin-bottom: 4px; }
+.work-desc { font-size: 13px; color: #666; line-height: 1.6; }
+.skills-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1rem; }
+.skill-card { background: #f7f7f5; border-radius: 8px; padding: 1rem 1.25rem; }
+.skill-name { font-size: 14px; font-weight: 500; margin-bottom: 8px; }
+.skill-bar-bg { height: 4px; background: #e5e5e5; border-radius: 100px; overflow: hidden; }
+.skill-bar-fill { height: 100%; background: #534AB7; border-radius: 100px; }
+.skill-level { font-size: 12px; color: #666; margin-top: 4px; }
+.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; }
+.about-text p { font-size: 15px; color: #666; line-height: 1.8; margin-bottom: 1rem; }
+.tl-item { display: flex; gap: 1rem; padding-bottom: 1.5rem; position: relative; }
+.tl-item::before { content: ''; position: absolute; left: 5px; top: 20px; width: 0.5px; height: 100%; background: #e5e5e5; }
+.tl-item:last-child::before { display: none; }
+.tl-dot { width: 12px; height: 12px; border-radius: 50%; background: #534AB7; flex-shrink: 0; margin-top: 4px; }
+.tl-year { font-size: 12px; color: #666; margin-bottom: 2px; }
+.tl-role { font-size: 14px; font-weight: 500; }
+.tl-company { font-size: 13px; color: #666; }
+.contact-section { padding: 4rem 2rem; background: #f7f7f5; text-align: center; }
+.contact-section h2 { font-size: 28px; font-weight: 500; margin-bottom: 0.5rem; }
+.contact-section p { font-size: 15px; color: #666; margin-bottom: 1.5rem; }
+.contact-links { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+.contact-link { padding: 10px 20px; border: 0.5px solid #ccc; border-radius: 8px; font-size: 14px; color: #1a1a1a; text-decoration: none; cursor: pointer; transition: all 0.2s; background: #fff; }
+.contact-link:hover { border-color: #534AB7; color: #534AB7; }
+.footer { padding: 1.2rem 2rem; border-top: 0.5px solid #e5e5e5; display: flex; justify-content: space-between; font-size: 13px; color: #666; }
